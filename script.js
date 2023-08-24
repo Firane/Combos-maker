@@ -19,16 +19,26 @@ const characters = [
   "Honda",
 ];
 
+const navArrow = document.querySelectorAll(".fa-caret-left");
 // Ca gere le bouton du menu de nav
 
 const navShow = () => {
   const navClassChecker = nav.classList.contains("hidden");
+  const eachIcon = Array.from(navArrow);
   if (navClassChecker) {
     nav.classList.remove("hidden");
     nav.classList.add("showed");
+    eachIcon.map((i) => {
+      i.classList.add("OnRight");
+      i.classList.remove("OnLeft");
+    });
   } else {
     nav.classList.add("hidden");
     nav.classList.remove("showed");
+    eachIcon.map((i) => {
+      i.classList.add("OnLeft");
+      i.classList.remove("OnRight");
+    });
   }
 };
 
