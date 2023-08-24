@@ -1,0 +1,25 @@
+@import "../Utils/variables";
+
+@function brighter-color($color) {
+  $hue: hue($color);
+  $sat: 60%;
+  $light: 55%;
+  $brighter: hsl($hue, $sat, $light);
+  @return $brighter;
+}
+
+@function darker-color($color) {
+  $hue: hue($color);
+  $sat: 30%;
+  $light: 20%;
+  $brighter: hsl($hue, $sat, $light);
+  @return $brighter;
+}
+
+@function darker-color-more($color) {
+  $hue: hue($color);
+  $sat: 30%;
+  $light: 10%;
+  $brighter: hsl($hue, $sat, $light);
+  @return $brighter;
+}

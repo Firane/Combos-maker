@@ -1,0 +1,141 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background: #2b3353;
+  color: mintcream;
+}
+
+h3 {
+  margin: 0 auto;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: hsl(228, 30%, 20%);
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: #2b3353;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #fefcfe;
+}
+
+button {
+  background: #2b3353;
+  color: mintcream;
+}
+button:hover {
+  background: hsl(228, 60%, 55%);
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+.character__list {
+  color: rebeccapurple;
+  padding: 0;
+  padding-right: 1vh;
+  list-style-type: none;
+  margin: auto;
+  overflow: scroll;
+  overflow-x: hidden;
+  height: 40vh;
+  flex-direction: column;
+  display: inline-flex;
+  row-gap: 10px;
+}
+.character__list__pick {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+}
+.character__list__pick > button {
+  border: 2px solid hsl(228, 30%, 10%);
+  border-radius: 8px;
+  padding-top: 7px;
+}
+.character__list__pick:hover {
+  background: hsl(228, 60%, 55%);
+}
+.character__list__thumb {
+  width: 30%;
+  height: 30%;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 50vh;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+
+h2 {
+  border-radius: 10px;
+  height: 40vh;
+  padding: 0rem 2rem 0rem 2rem;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  font-size: medium;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px dashed hsl(228, 60%, 55%);
+}
+h2 > i#navTopIcon {
+  position: absolute;
+  top: 0px;
+  color: yellow;
+}
+h2 > i#navBottomIcon {
+  position: absolute;
+  bottom: 0px;
+  color: red;
+}
+h2:hover {
+  background: hsl(228, 60%, 55%);
+}
+
+.hidden {
+  animation: slideOutNav 0.5s both ease;
+}
+
+.showed {
+  animation: slideInNav 0.5s both ease;
+}
+
+@keyframes slideOutNav {
+  from {
+    margin: 0;
+  }
+  to {
+    margin: 0vh 0vh 0vh -16vh;
+  }
+}
+@keyframes slideInNav {
+  from {
+    margin: 0vh 0vh 0vh -16vh;
+  }
+  to {
+    margin: 0;
+  }
+}/*# sourceMappingURL=style.css.map */

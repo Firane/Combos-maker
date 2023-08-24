@@ -1,0 +1,17 @@
+@keyframes slideOutNav {
+  from {
+    margin: 0;
+  }
+  to {
+    margin: 0vh 0vh 0vh -16vh;
+  }
+}
+
+@keyframes slideInNav {
+  from {
+    margin: 0vh 0vh 0vh -16vh;
+  }
+  to {
+    margin: 0;
+  }
+}

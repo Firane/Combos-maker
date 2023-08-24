@@ -1,0 +1,51 @@
+@import "../Utils/variables";
+@import "../Utils/functions";
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 50vh;
+  column-gap: 10px;
+}
+
+h2 {
+  border-radius: 10px;
+  height: 40vh;
+  padding: 0rem 2rem 0rem 2rem;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  font-size: medium;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px dashed brighter-color($color-background);
+  & > i#navTopIcon {
+    position: absolute;
+    top: 0px;
+    color: yellow;
+  }
+  & > i#navBottomIcon {
+    position: absolute;
+    bottom: 0px;
+    color: red;
+  }
+  &:hover {
+    background: brighter-color($color-background);
+  }
+}
+
+.hidden {
+  animation: slideOutNav 0.5s both ease;
+}
+.showed {
+  animation: slideInNav 0.5s both ease;
+}
+
+// #navTopIcon {
+// }
+
+// #navBottomIcon {
+// }
