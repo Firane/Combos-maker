@@ -4,7 +4,10 @@
 h1 {
   text-align: center;
 }
-
+.main__content {
+  display: flex;
+  column-gap: 2vh;
+}
 .character__list {
   color: rebeccapurple;
   padding: 0;
@@ -16,7 +19,8 @@ h1 {
   height: 40vh;
   flex-direction: column;
   display: inline-flex;
-  row-gap: 10px;
+  row-gap: 0.5vh;
+  margin: 0;
   &__pick {
     display: flex;
     align-items: center;
@@ -24,7 +28,7 @@ h1 {
     & > button {
       border: 2px solid darker-color-more($color-background);
       border-radius: 8px;
-      padding-top: 7px;
+      padding-top: 0.5vh;
     }
     &:hover {
       background: brighter-color($color-background);
@@ -34,4 +38,60 @@ h1 {
     width: 30%;
     height: 30%;
   }
+}
+
+.combos__list {
+  background: white;
+  border-radius: 10px;
+}
+
+.combos__display {
+  margin-left: 2vh;
+  &__list {
+    color: black;
+    &__comboContainer {
+      display: inline;
+      &__oneCombo {
+        border-radius: 10px;
+        border: 1px black solid;
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        align-items: center;
+      }
+      &__titleAndEdit {
+        display: flex;
+        align-items: center;
+        column-gap: 1vh;
+      }
+    }
+  }
+  &__editor {
+    color: black;
+    &__inputsList {
+      color: black;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      row-gap: 2vh;
+      column-gap: 2vh;
+      &__input {
+        border: 2px solid black;
+        background: $color-text;
+        width: 60px;
+        height: 60px;
+        z-index: 1;
+      }
+    }
+  }
+}
+
+#theOneButton {
+  background-image: url("/Images/punch_3x.png");
+  background-repeat: no-repeat;
+}
+
+img.input {
+  z-index: -1;
+  position: relative;
 }

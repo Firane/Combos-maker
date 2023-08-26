@@ -30,25 +30,278 @@
     </header>
 
     <!-- squelette -->
+    <div class="main__content">
+      <nav id="nav" class="hidden">
+        <ul class="character__list" id="charactersListContainer"></ul>
+        <h2 id="scroller">
+          <i class="fa-solid fa-caret-left" id="navTopIcon"></i>
+          <span class="character__list__title__separateur">C</span>
+          <span class="character__list__title__separateur">H</span>
+          <span class="character__list__title__separateur">A</span>
+          <span class="character__list__title__separateur">R</span>
+          <span class="character__list__title__separateur">A</span>
+          <span class="character__list__title__separateur">C</span>
+          <span class="character__list__title__separateur">T</span>
+          <span class="character__list__title__separateur">E</span>
+          <span class="character__list__title__separateur">R</span>
+          <span class="character__list__title__separateur">S</span>
+          <i class="fa-solid fa-caret-left" id="navBottomIcon"></i>
+        </h2>
+      </nav>
 
-    <nav id="nav" class="hidden">
-      <ul class="character__list" id="charactersListContainer"></ul>
-      <h2 id="scroller">
-        <i class="fa-solid fa-caret-left" id="navTopIcon"></i>
-        <span class="character__list__title__separateur">C</span>
-        <span class="character__list__title__separateur">H</span>
-        <span class="character__list__title__separateur">A</span>
-        <span class="character__list__title__separateur">R</span>
-        <span class="character__list__title__separateur">A</span>
-        <span class="character__list__title__separateur">C</span>
-        <span class="character__list__title__separateur">T</span>
-        <span class="character__list__title__separateur">E</span>
-        <span class="character__list__title__separateur">R</span>
-        <span class="character__list__title__separateur">S</span>
-        <i class="fa-solid fa-caret-left" id="navBottomIcon"></i>
-      </h2>
-    </nav>
-
+      <main>
+        <section class="combos__display">
+          <article class="combos__display__list">
+            <h4>Manon combos list :</h4>
+            <div class="combos__display__list__comboContainer" id="1">
+              <div class="combos__display__list__comboContainer__titleAndEdit">
+                <h5>Hadouken</h5>
+                <i class="fa-regular fa-pen-to-square edit"></i>
+              </div>
+              <div class="combos__display__list__comboContainer__oneCombo">
+                <div><img src="/Images/motion_fb.png" alt="forward" /></div>
+                <div>
+                  <img src="Images/light_punch.png" alt="light_punch" />
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="combos__display__editor">
+            <h4>Combos editor :</h4>
+            <div class="combos__display__editor__inputsList">
+              <button
+                class="combos__display__editor__inputsList__input"
+                value="forward"
+              >
+                <img
+                  class="input"
+                  src="./Images/motion_right.png"
+                  alt="Motion info : right"
+                />
+              </button>
+              <button
+                class="combos__display__editor__inputsList__input"
+                value="back"
+              >
+                <img
+                  class="input"
+                  src="./Images/motion_left.png"
+                  alt="Motion info : back"
+                />
+              </button>
+              <button
+                class="combos__display__editor__inputsList__input"
+                value="up"
+              >
+                <img
+                  class="input"
+                  src="./Images/motion_up.png"
+                  alt="Motion info : up"
+                />
+              </button>
+              <button
+                class="combos__display__editor__inputsList__input"
+                value="down"
+              >
+                <img
+                  class="input"
+                  src="./Images/motion_down.png"
+                  alt="Motion info : down"
+                />
+              </button>
+              <button
+                class="combos__display__editor__inputsList__input"
+                value="upLeft"
+              >
+                <img
+                  class="input"
+                  src="./Images/motion_upleft.png"
+                  alt="Motion info : upLeft"
+                />
+              </button>
+              <button
+                class="combos__display__editor__inputsList__input"
+                value="upRight"
+              >
+                <img
+                  class="input"
+                  src="./Images/motion_upright.png"
+                  alt="Motion info : upRight"
+                />
+              </button>
+              <button
+                class="combos__display__editor__inputsList__input"
+                value="downLeft"
+              >
+                <img
+                  class="input"
+                  src="./Images/motion_downleft.png"
+                  alt="Motion info : downLeft"
+                />
+              </button>
+              <button
+                class="combos__display__editor__inputsList__input"
+                value="downRight"
+              >
+                <img
+                  class="input"
+                  src="./Images/motion_downright.png"
+                  alt="Motion info : downRight"
+                />
+              </button>
+              <button
+                class="combos__display__editor__inputsList__input"
+                value="Crouch"
+              >
+                <img
+                  class="input"
+                  src="./Images/motion_crouch.png"
+                  alt="Motion info : Crouch"
+                />
+              </button>
+              <button
+                class="combos__display__editor__inputsList__input"
+                value="jump"
+              >
+                <img
+                  class="input"
+                  src="./Images/motion_jump.png"
+                  alt="Motion info : jump"
+                />
+              </button>
+              <button
+                class="combos__display__editor__inputsList__input"
+                value="quarterForward"
+              >
+                <img
+                  class="input"
+                  src="./Images/motion_fb.png"
+                  alt="Motion info : quarterForward"
+                />
+              </button>
+              <button
+                class="combos__display__editor__inputsList__input"
+                value="halfBack"
+              >
+                <img
+                  class="input"
+                  src="./Images/motion_hcb.png"
+                  alt="Motion info : halfBack"
+                />
+              </button>
+              <button
+                class="combos__display__editor__inputsList__input"
+                value="neutralJump"
+              >
+                <img
+                  class="input"
+                  src="./Images/motion_neutral_jump.png"
+                  alt="Motion info : neutralJump"
+                />
+              </button>
+              <button
+                class="combos__display__editor__inputsList__input"
+                value="quarterBack"
+              >
+                <img
+                  class="input"
+                  src="./Images/motion_rfb.png"
+                  alt="Motion info : quarterBack"
+                />
+              </button>
+              <button
+                class="combos__display__editor__inputsList__input"
+                value="360"
+              >
+                <img
+                  class="input"
+                  src="./Images/motion_360.png"
+                  alt="Motion info : 360"
+                />
+              </button>
+              <button
+                class="combos__display__editor__inputsList__input"
+                value="LK"
+              >
+                <img
+                  class="input"
+                  src="./Images/light_kick.png"
+                  alt="Motion info : LK"
+                />
+              </button>
+              <button
+                class="combos__display__editor__inputsList__input"
+                value="LP"
+              >
+                <img
+                  class="input"
+                  src="./Images/light_punch.png"
+                  alt="Motion info : LP"
+                />
+              </button>
+              <button
+                class="combos__display__editor__inputsList__input"
+                value="MK"
+              >
+                <img
+                  class="input"
+                  src="./Images/medium_kick.png"
+                  alt="Motion info : MK"
+                />
+              </button>
+              <button
+                class="combos__display__editor__inputsList__input"
+                value="MP"
+              >
+                <img
+                  class="input"
+                  src="./Images/medium_punch.png"
+                  alt="Motion info : MP"
+                />
+              </button>
+              <button
+                class="combos__display__editor__inputsList__input"
+                value="HK"
+              >
+                <img
+                  class="input"
+                  src="./Images/heavy_kick.png"
+                  alt="Motion info : HK"
+                />
+              </button>
+              <button
+                class="combos__display__editor__inputsList__input"
+                value="HP"
+              >
+                <img
+                  class="input"
+                  src="./Images/heavy_punch.png"
+                  alt="Motion info : HP"
+                />
+              </button>
+              <button
+                class="combos__display__editor__inputsList__input"
+                value="forward"
+              >
+                <img src="./Images/motion_down.png" alt="Motion info : right" />
+              </button>
+              <button
+                class="combos__display__editor__inputsList__input"
+                value="forward"
+              >
+                <img src="./Images/motion_down.png" alt="Motion info : right" />
+              </button>
+              <button
+                class="combos__display__editor__inputsList__input"
+                value="forward"
+              >
+                <img src="./Images/motion_down.png" alt="Motion info : right" />
+              </button>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
     <script src="./script.js"></script>
   </body>
 </html>

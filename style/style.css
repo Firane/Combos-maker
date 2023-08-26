@@ -1,10 +1,21 @@
 * {
   font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
 }
 
 body {
   background: #2b3353;
   color: mintcream;
+  max-width: 1500px;
+  position: relative;
+  margin: 0 auto;
+}
+
+main {
+  color: black;
+  background: rgba(255, 255, 255, 0);
+  border-radius: 10px;
+  width: 90%;
 }
 
 h3 {
@@ -47,6 +58,12 @@ h1 {
   text-align: center;
 }
 
+.main__content {
+  display: flex;
+  -moz-column-gap: 2vh;
+       column-gap: 2vh;
+}
+
 .character__list {
   color: rebeccapurple;
   padding: 0;
@@ -58,7 +75,8 @@ h1 {
   height: 40vh;
   flex-direction: column;
   display: inline-flex;
-  row-gap: 10px;
+  row-gap: 0.5vh;
+  margin: 0;
 }
 .character__list__pick {
   display: flex;
@@ -68,7 +86,7 @@ h1 {
 .character__list__pick > button {
   border: 2px solid hsl(228, 30%, 10%);
   border-radius: 8px;
-  padding-top: 7px;
+  padding-top: 0.5vh;
 }
 .character__list__pick:hover {
   background: hsl(228, 60%, 55%);
@@ -78,20 +96,80 @@ h1 {
   height: 30%;
 }
 
+.combos__list {
+  background: white;
+  border-radius: 10px;
+}
+
+.combos__display {
+  margin-left: 2vh;
+}
+.combos__display__list {
+  color: black;
+}
+.combos__display__list__comboContainer {
+  display: inline;
+}
+.combos__display__list__comboContainer__oneCombo {
+  border-radius: 10px;
+  border: 1px black solid;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+}
+.combos__display__list__comboContainer__titleAndEdit {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 1vh;
+       column-gap: 1vh;
+}
+.combos__display__editor {
+  color: black;
+}
+.combos__display__editor__inputsList {
+  color: black;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 2vh;
+  -moz-column-gap: 2vh;
+       column-gap: 2vh;
+}
+.combos__display__editor__inputsList__input {
+  border: 2px solid black;
+  background: mintcream;
+  width: 60px;
+  height: 60px;
+  z-index: 1;
+}
+
+#theOneButton {
+  background-image: url("/Images/punch_3x.png");
+  background-repeat: no-repeat;
+}
+
+img.input {
+  z-index: -1;
+  position: relative;
+}
+
 nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
   height: 50vh;
-  -moz-column-gap: 10px;
-       column-gap: 10px;
+  -moz-column-gap: 1vh;
+       column-gap: 1vh;
+  width: 194px;
+  min-height: 275px;
+  margin: 0;
 }
 
 h2 {
   border-radius: 10px;
   height: 40vh;
-  padding: 0rem 2rem 0rem 2rem;
+  padding: 0vh 3vh 0vh 3vh;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
@@ -134,12 +212,12 @@ h2:hover {
     margin: 0;
   }
   to {
-    margin: 0vh 0vh 0vh -16vh;
+    margin: 0px 0px 0px -128px;
   }
 }
 @keyframes slideInNav {
   from {
-    margin: 0vh 0vh 0vh -16vh;
+    margin: 0px 0px 0px -128px;
   }
   to {
     margin: 0;

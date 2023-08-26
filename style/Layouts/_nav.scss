@@ -5,15 +5,17 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
   height: 50vh;
-  column-gap: 10px;
+  column-gap: 1vh;
+  width: 194px;
+  min-height: 275px;
+  margin: 0;
 }
 
 h2 {
   border-radius: 10px;
   height: 40vh;
-  padding: 0rem 2rem 0rem 2rem;
+  padding: 0vh 3vh 0vh 3vh;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
