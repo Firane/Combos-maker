@@ -16,14 +16,21 @@ body {
 }
 
 main {
-  color: black;
+  color: $color-text;
   background: rgba(255, 255, 255, 0);
   border-radius: 10px;
   width: 90%;
+  margin: 1vh;
 }
 
 h3 {
-  margin: 0 auto;
+  margin: auto;
+}
+h5 {
+  margin: 0;
+}
+h5 {
+  font-size: 1rem;
 }
 
 ::-webkit-scrollbar-track {
@@ -49,4 +56,9 @@ button {
   &:hover {
     background: brighter-color($color-background);
   }
+}
+
+div.combos__display__editor__inputsList
+  > button.combos__display__editor__inputsList__input {
+  background: rgba(255, 255, 255, 0);
 }

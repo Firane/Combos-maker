@@ -28,6 +28,12 @@ const edits = Array.from(document.querySelectorAll(".edit"));
 const input = Array.from(
   document.querySelectorAll(".combos__display__editor__inputsList__input")
 );
+
+let inputDisplayed = Array.from(
+  document.querySelectorAll(
+    ".combos__display__list__comboContainer__oneCombo__inputdisplayed"
+  )
+);
 const navArrow = document.querySelectorAll(".fa-caret-left");
 // Ca gere le bouton du menu de nav
 
@@ -74,10 +80,20 @@ const listenInputs = () => {
     element.addEventListener("click", (e) => {
       let theClone = e.target.firstElementChild.cloneNode(true);
       let theDiv = edit.getElementsByTagName("div")[1];
-      console.log(theDiv);
-      console.log(theClone);
-      theDiv.appendChild(theClone);
+      theDiv.innerHTML += `
+      <div class='combos__display__list__comboContainer__oneCombo__inputdisplayed'></div>
+      `;
 
+      everyIconsContainer = theDiv.getElementsByTagName("div");
+      everyIconsContainer[everyIconsContainer.length - 1].appendChild(theClone);
+
+      inputDisplayed = Array.from(
+        document.querySelectorAll(
+          ".combos__display__list__comboContainer__oneCombo__inputdisplayed"
+        )
+      );
+
+      listenInputDisplayed();
       // ca ajoute une balise img au lieu de la div contenant limg ca pause soucis plus tard pour le add event listener
     });
   });
@@ -86,20 +102,44 @@ const listenInputs = () => {
 const listenEdits = () => {
   edits.map((element) => {
     element.addEventListener("click", (e) => {
-      edit = e.target.parentElement.parentElement;
-      console.log(edit);
-      console.log(edit.getElementsByTagName("div")[1]);
+      if (edit === undefined) {
+        listenInputDisplayed();
+        edit = e.target.parentElement.parentElement;
+        let theDiv = edit.getElementsByTagName("div")[1];
+        console.log("defined");
+        console.log(theDiv);
+        theDiv.style.border = "2px dashed white";
+      } else {
+        console.log("undefined");
+        edit = undefined;
+        const combos = Array.from(
+          document.querySelectorAll(
+            ".combos__display__list__comboContainer__oneCombo"
+          )
+        );
+        console.log(combos);
+        combos.map((element) => {
+          element.style.border = "2px solid white";
+        });
+      }
     });
   });
 };
 
-const listenComboContainer = () => {
-  comboContainer.map((element) => {
+// const listenComboContainer = () => {
+//   comboContainer.map((element) => {
+//     element.addEventListener("click", (e) => {
+//       if (e.target.tagName === "IMG") {
+//         console.log("saucisse");
+//       }
+//     });
+//   });
+// };
+
+const listenInputDisplayed = () => {
+  inputDisplayed.map((element) => {
     element.addEventListener("click", (e) => {
-      console.log(e);
-      if (e.target.tagName === "IMG") {
-        console.log("saucisse");
-      }
+      element.remove();
     });
   });
 };
@@ -112,6 +152,25 @@ window.addEventListener("load", () => {
   liGenerator();
   listenInputs();
   listenEdits();
-  listenComboContainer();
+  // listenComboContainer();
+
   charactersListContainer.classList.add("addBorder");
+});
+
+combosMakerMinimizer.addEventListener("click", (e) => {
+  console.log("minimizer");
+  const teub = getComputedStyle(combosMakerInputsList);
+  console.log(teub);
+  console.log(teub.height);
+
+  if (teub.height != "0px") {
+    // combosMakerInputsList.classList.add("minimizerOut");
+    // combosMakerInputsList.classList.remove("minimizerIn");
+    combosMakerInputsList.style.height = "0px";
+    combosMakerInputsList.style.overflow = "hidden";
+  } else {
+    // combosMakerInputsList.classList.add("minimizerIn");
+    // combosMakerInputsList.classList.remove("minimizerOut");
+    combosMakerInputsList.style.height = "auto";
+  }
 });

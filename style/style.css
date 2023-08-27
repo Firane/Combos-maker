@@ -12,14 +12,23 @@ body {
 }
 
 main {
-  color: black;
+  color: mintcream;
   background: rgba(255, 255, 255, 0);
   border-radius: 10px;
   width: 90%;
+  margin: 1vh;
 }
 
 h3 {
-  margin: 0 auto;
+  margin: auto;
+}
+
+h5 {
+  margin: 0;
+}
+
+h5 {
+  font-size: 1rem;
 }
 
 ::-webkit-scrollbar-track {
@@ -47,6 +56,10 @@ button:hover {
   background: hsl(228, 60%, 55%);
 }
 
+div.combos__display__editor__inputsList > button.combos__display__editor__inputsList__input {
+  background: rgba(255, 255, 255, 0);
+}
+
 header {
   display: flex;
   flex-direction: column;
@@ -54,6 +67,62 @@ header {
   align-content: center;
 }
 
+@keyframes slideOutNav {
+  from {
+    margin: 0;
+  }
+  to {
+    margin: 0px 0px 0px -128px;
+  }
+}
+@keyframes slideInNav {
+  from {
+    margin: 0px 0px 0px -128px;
+  }
+  to {
+    margin: 0;
+  }
+}
+@keyframes arrowToTheRight {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+@keyframes arrowToTheLeft {
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes minimizerOut {
+  from {
+    max-height: auto;
+  }
+  to {
+    max-height: 0px;
+  }
+}
+@keyframes minimizerIn {
+  from {
+    height: 0%;
+  }
+  to {
+    height: 30%;
+  }
+}
+@keyframes minimizerOut {
+  from {
+    height: 30%;
+  }
+  to {
+    height: 0%;
+  }
+}
 h1 {
   text-align: center;
 }
@@ -104,44 +173,44 @@ h1 {
 .combos__display {
   margin-left: 2vh;
 }
-.combos__display__list {
-  color: black;
-}
 .combos__display__list__comboContainer {
   display: inline;
 }
 .combos__display__list__comboContainer__oneCombo {
   border-radius: 10px;
-  border: 1px black solid;
+  background: linear-gradient(180deg, #44429e, #42889e);
+  border: 1px solid mintcream;
   display: flex;
   flex-direction: row;
   justify-content: left;
   align-items: center;
+  padding-left: 1vh;
+  position: relative;
+  min-height: 6vh;
+  flex-wrap: wrap;
 }
 .combos__display__list__comboContainer__titleAndEdit {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   -moz-column-gap: 1vh;
        column-gap: 1vh;
-}
-.combos__display__editor {
-  color: black;
+  margin-bottom: 1vh;
 }
 .combos__display__editor__inputsList {
-  color: black;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   row-gap: 2vh;
   -moz-column-gap: 2vh;
        column-gap: 2vh;
+  overflow: hidden;
 }
 .combos__display__editor__inputsList__input {
   border: 2px solid black;
   background: mintcream;
   width: 60px;
   height: 60px;
-  z-index: 1;
 }
 
 #theOneButton {
@@ -149,9 +218,39 @@ h1 {
   background-repeat: no-repeat;
 }
 
-img.input {
+button.combos__display__editor__inputsList__input > img {
   z-index: -1;
   position: relative;
+}
+
+.minimizerOut {
+  animation: minimizerOut 2s both;
+}
+
+.minimizerIn {
+  animation: minimizerIn 2s both;
+}
+
+#minimizerContainer {
+  margin-top: 10px;
+  margin-bottom: -42px;
+  text-align: right;
+}
+
+#combosMakerMinimizer {
+  font-size: 1.5rem;
+}
+#combosMakerMinimizer:hover {
+  font-size: 1.5rem;
+  color: hsl(228, 60%, 55%);
+}
+
+.edit {
+  font-size: 1.5rem;
+}
+.edit:hover {
+  font-size: 1.5rem;
+  color: hsl(228, 60%, 55%);
 }
 
 nav {
@@ -237,5 +336,29 @@ h2:hover {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+@keyframes minimizerOut {
+  from {
+    max-height: auto;
+  }
+  to {
+    max-height: 0px;
+  }
+}
+@keyframes minimizerIn {
+  from {
+    height: 0%;
+  }
+  to {
+    height: 30%;
+  }
+}
+@keyframes minimizerOut {
+  from {
+    height: 30%;
+  }
+  to {
+    height: 0%;
   }
 }/*# sourceMappingURL=style.css.map */

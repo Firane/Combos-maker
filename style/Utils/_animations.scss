@@ -33,3 +33,30 @@
     transform: rotate(360deg);
   }
 }
+
+@keyframes minimizerOut {
+  from {
+    max-height: auto;
+  }
+  to {
+    max-height: 0px;
+  }
+}
+
+@keyframes minimizerIn {
+  from {
+    height: 0%;
+  }
+  to {
+    height: 30%;
+  }
+}
+
+@keyframes minimizerOut {
+  from {
+    height: 30%;
+  }
+  to {
+    height: 0%;
+  }
+}
